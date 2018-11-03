@@ -1,0 +1,16 @@
+package harmonic;
+
+import java.util.Scanner;
+
+public class main {
+	public static void main(String[] args) {
+		float sum=0.0f;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Nth term for counting harmonic value:\n");
+		int value=sc.nextInt();
+		for(int i=1;i<=value;i++) {
+			sum=sum+(1/(float)i);
+		}
+		System.out.println("sum of "+value+" harmonic value is:"+sum);
+ }
+}
