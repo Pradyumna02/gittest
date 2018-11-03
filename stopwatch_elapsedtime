@@ -1,0 +1,55 @@
+package stopwatch;
+
+import java.util.Calendar;
+import java.util.Scanner;
+
+public class main {
+	public static long startTimer=0,s1=0;
+	public static long stopTimer=0,s2=0;
+	public static long elapsed,diff;
+	//static Calendar calendar = Calendar.getInstance();
+public static void main(String[] args) {
+	
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter 1 to start \n");
+	int strt=sc.nextInt();
+	start();
+	
+	
+	System.out.println("Enter0 to stop\n");
+	int stp=sc.nextInt();
+	stop();
+	
+	elapsedtime();
+	
+}
+
+private static void elapsedtime() {
+	// TODO Auto-generated method stub
+	elapsed=stopTimer-startTimer;
+	System.out.println("Elapsed time in millisecond is :"+elapsed);
+	
+	diff=s2-s1;
+	System.out.println("Elapsed time in second is :"+diff);
+}
+
+private static void stop() {
+	// TODO Auto-generated method stub
+	stopTimer=System.currentTimeMillis();
+	s2=System.currentTimeMillis()/1000;
+	//s2=calendar.get(Calendar.SECOND);
+	//System.out.println(s2);
+}
+
+private static void start() {
+	// TODO Auto-generated method stub
+	startTimer=System.currentTimeMillis();
+	s1=System.currentTimeMillis()/1000;
+	// s1=calendar.get(Calendar.SECOND);
+	 //System.out.println(s1); 
+	 
+
+	
+} 
+
+}
